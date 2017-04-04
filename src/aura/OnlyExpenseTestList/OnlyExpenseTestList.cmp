@@ -1,0 +1,14 @@
+<aura:component controller="ExpenseTestController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="expenses" type="Expense__c[]"/>
+    
+    <!-- Display expense records -->
+          <div class="container slds-p-top--medium">
+              <div id="list" class="row">
+                 <aura:iteration items="{!v.expenses}" var="exp">
+                    <!--If you’re using a namespace, use myNamespace:expenseList instead-->
+                    <c:expenseTestList expense="{!exp}"/>
+                </aura:iteration>
+              </div>
+          </div> 
+</aura:component>

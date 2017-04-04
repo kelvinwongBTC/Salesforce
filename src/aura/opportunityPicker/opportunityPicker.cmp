@@ -1,0 +1,21 @@
+<aura:component controller="OpportunityListModel">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="opportunities" type="Opportunity[]"/>
+    <aura:registerEvent name="appSelectOpportunity" type="c:selectOpportunityEvent"/>
+
+    <div class="controlLayout"> 
+    <ui:inputSelect change="{!c.onSelectOpportunity}" aura:id="opportunitySelectElement" >
+        <aura:iteration items="{!v.opportunities}" var="opp" indexVar="index">
+            <aura:if isTrue="{!index ==0}" >
+                  <ui:inputSelectOption text="{!opp.Id}" label="{!opp.Name}" value="true"/>
+            <aura:set attribute="else">
+                  <ui:inputSelectOption text="{!opp.Id}" label="{!opp.Name}" value="false"/>
+            </aura:set>
+            </aura:if>
+            
+        </aura:iteration>
+    </ui:inputSelect>
+        </div>
+
+    
+</aura:component>

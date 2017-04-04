@@ -1,0 +1,8 @@
+.THIS.controlLayout {
+    padding: 14px;
+    background-color: #ffffff;
+    margin: 14px;
+    border-radius: 5px;
+    border: 1px solid #cfd4d9;
+    white-space: nowrap;
+}

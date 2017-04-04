@@ -1,0 +1,28 @@
+<aura:component implements="force:appHostable" controller="BTCModel">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <c:GenerateSignature />
+    <aura:handler event="c:selectOpportunityEvent" action="{!c.handleSelectOpportunity}"/>
+    
+    <aura:registerEvent name="appSelectOpportunity" type="c:selectOpportunityEvent"/>
+    <aura:registerEvent name="SetCRMRecommendation" type="c:SetCRMRecommendationResultEvent"/>
+    <aura:registerEvent name="componentSetEvent" type="c:SetCRMRecommendationResultEvent"/>
+
+    <aura:handler name="componentSetEvent" event="c:SetCRMRecommendationResultEvent" action="{!c.setCRMRecommendation}"/>
+
+    <aura:attribute name="opportunity" type="Opportunity"/>
+
+    <div id="test"> hello </div>
+   
+    <ltng:require scripts="{!$Resource.jQueryLib}"
+                   styles="{!$Resource.CRMRecommendationStyle}"
+    		afterScriptsLoaded="{!c.afterScriptsLoaded}" />
+    
+    <!--<button type="submit" aura:id="authorize" id="hub-sign-in">Authorize</button>-->
+    
+    <c:opportunityPicker />
+    
+    <button type="submit" id="hub-recommend">Recommend</button>
+
+    <c:CRMRecommendationResult />
+
+</aura:component>

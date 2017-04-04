@@ -1,0 +1,39 @@
+<aura:component controller="OpportunityListModel" implements="force:appHostable">
+      	<aura:handler event="c:selectOpportunityEvent" action="{!c.handleSelectOpportunity}"/>
+
+        <aura:attribute name="opportunity" type="Opportunity"/>
+		<!--<div>Name: {!v.opportunity.Name}</div>
+        <div>Name: {!v.opportunity.Name}</div>
+        <div>Description: {!v.opportunity.Description}</div>
+        <div>Amount: {!v.opportunity.Amount}</div>
+        <div>Close Date: {!v.opportunity.CloseDate}</div>
+        <div>Stage Name: {!v.opportunity.StageName}</div>
+        <div>Owner Name: {!v.opportunity.Owner.Name}</div>-->
+    
+    <div class="listRecord recordLayout">
+        <div class="itemTitle">
+            <ui:outputText class="itemTitle" value="{!v.opportunity.Namee}"/>
+        </div>
+        <div class="recordItem">
+            <ui:outputText value="Account Name:" class="recordCell label truncate"/>
+            <ui:outputText value="{!v.opportunity.AccountName}" class="recordCell value truncate"/>
+        </div>
+        <div class="recordItem">
+            <ui:outputText value="Amount:" class="recordCell label truncate"/>
+            <ui:outputText value="{!'$' + v.opportunity.Amount}" class="recordCell value truncate"/>
+        </div>
+        <div class="recordItem">
+            <ui:outputText value="Close Date:" class="recordCell label truncate"/>
+            <ui:outputDate value="{!v.opportunity.CloseDate}" class="recordCell value truncate"/>
+        </div>
+        <div class="recordItem">
+            <ui:outputText value="Stage:" class="recordCell label truncate"/>
+            <ui:outputText value="{!v.opportunity.StageName}" class="recordCell value truncate"/>
+        </div>
+        <div class="recordItem">
+            <ui:outputText value="Opportunity Owner:" class="recordCell label truncate"/>
+            <ui:outputText value="{!v.opportunity.OwnerName}" class="recordCell value truncate"/>
+        </div>
+    </div>
+    
+</aura:component>

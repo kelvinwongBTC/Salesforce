@@ -1,0 +1,42 @@
+<aura:component >
+    	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+        <aura:attribute name="story" type="Object"/>
+    
+    <ul >
+            <li style="text-overflow:ellipsis;overflow:hidden;">
+                <article class="recommended-story" style="text-overflow:ellipsis;overflow:hidden;">
+                    <div class="story-wrap">
+             <aura:if isTrue="{!v.story.featured_image == ''}" >
+                        <img src="/resource/1490833458000/btcmobile__ContentResources/img/no_stories_thumb.png" class="canHideImage" onerror="this.onerror=null;this.src='/resource/1490833458000/btcmobile__ContentResources/img/no_stories_thumb.png'"/>
+            <aura:set attribute="else">
+                        <img src="{!v.story.featured_image}" class="canHideImage" onerror="this.onerror=null;this.src='/resource/1490833458000/btcmobile__ContentResources/img/no_stories_thumb.png'"/>
+            </aura:set>
+            </aura:if>
+
+                        
+                        <div class="description">
+                            <div class="container">
+                                {!v.story.description}
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <h1>{!v.story.title}</h1>
+                    <div id="author">
+                        {!v.story.author}
+                    </div>
+                     <ul class="story-actions">
+                         <li class="share" data-sharing="31">
+                            
+                             <a href="#" class="icon-share variable-border-hover variable-color" title="Share" onclick="{!c.didSelectShareStory}">Share</a>
+                         </li>
+                         <li class="view" data-sharing="31">
+                             <a href="#" class="icon-view variable-border-hover variable-color" title="View" onclick="{!c.didSelectViewStory}">View</a>
+                         </li>
+
+                    </ul>
+                </article>
+            </li>
+        </ul>
+
+</aura:component>

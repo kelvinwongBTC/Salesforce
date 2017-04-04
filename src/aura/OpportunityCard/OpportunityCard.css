@@ -1,0 +1,76 @@
+.THIS.recordLayout {
+    list-style: none;
+    padding: 14px;
+    border-bottom:1px solid #cfd4d9
+}
+.THIS.listRecord {
+    background-color: #ffffff;
+    margin: 14px;
+    border-radius: 5px;
+    border: 1px solid #cfd4d9;
+    position: relative;
+}
+.THIS .uiInputSelect {
+    margin: 0px 4px;
+}
+.THIS .uiOutputText {
+    line-height: 1.1em;
+}
+.THIS.listRecord button {
+    display: inline-block;
+    outline: 0px none;
+    border: 0px none;
+    background: transparent;
+    position: absolute;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 32px;
+    max-height: 32px;
+    right: 0px;
+    top: 0px;
+}
+.THIS.listRecord button.trash {
+}
+.THIS.listRecord button.lock {
+    right: 32px;
+}
+.THIS.listRecord button.unlocked {
+    
+}
+.THIS.listRecord button.locked {
+    
+}
+.THIS .pin .label {
+    width: auto;
+}
+.THIS .itemTitle {
+    font-size: 15px;
+    padding-bottom: 3px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;        
+}
+.THIS .recordCell {
+    padding: 1px 14px 1px 0;
+    line-height: 16px;
+    max-height: 16px;
+    display: inline-block;
+}
+.THIS .recordItem {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;        
+}
+.THIS .recordItem .label {
+    padding-right: 14px;
+    width: 125px;
+    color: #696e71;
+}
+.THIS .value {
+    
+}
+.THIS .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;        
+}

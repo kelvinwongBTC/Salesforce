@@ -1,0 +1,89 @@
+<aura:component >
+	<ltng:require scripts="{!join(',', $Resource.jQueryLib)}"
+    		afterScriptsLoaded="{!c.afterScriptsLoaded}" />
+
+    <aura:handler event="c:SetCRMRecommendationResultEvent" action="{!c.setCRMRecommendation}"/>
+    <aura:attribute name="validStories" type="Object[]"/>
+
+	<h1>Recommended Stories</h1>
+    
+    <div id="list-stories" style="display: block;">
+        <div id="articles">
+            <ul>
+                <aura:iteration items="{!v.validStories}" var="story" indexVar="index">
+                    <c:StoryTile story="{!story}" />
+                </aura:iteration>
+            </ul>
+
+            <div style="clear:both;"></div> 
+        </div>
+    </div>
+
+    <!--<div id="list-stories" style="display: block;">
+    <div id="articles">
+        <ul>
+        
+        
+            <li>
+                <article data-id="1012897403" data-perm_id="1012897403" class="recommended-story" style="text-overflow:ellipsis;overflow:hidden;">
+
+                    <div class="story-wrap">
+                        
+                        <img src="/resource/1490833458000/btcmobile__ContentResources/img/no_stories_thumb.png" class="canHideImage" onerror="this.onerror=null;this.src='/resource/1490833458000/btcmobile__ContentResources/img/no_stories_thumb.png'"/>
+                        
+                        <div class="description"><div class="container">come on this is about Buy Op&amp;nbsp;  &amp;nbsp;  BuyOp ??  &amp;nbsp;  Sure thing that is going to be shared&amp;nbsp;</div></div>
+                        
+                        
+                    </div>
+                    <h1>Kelvin Test Again</h1>
+                    <div id="author">
+                        K W Admin
+                    </div>
+                     <ul class="story-actions">
+                         <li class="share" data-sharing="31">
+                             <a href="#" class="icon-share variable-border-hover variable-color" title="Share">Share</a>
+                         </li>
+                         <li class="view" data-sharing="31">
+                             <a href="#" class="icon-view variable-border-hover variable-color" title="View">View</a>
+                         </li>
+
+                    </ul>
+                </article>
+            </li>
+        
+        
+            <li>
+                <article data-id="1012897456" data-perm_id="1012897456" class="recommended-story" style="text-overflow:ellipsis;overflow:hidden;">
+
+                    <div class="story-wrap">
+                        
+                        <img src="/resource/1490833458000/btcmobile__ContentResources/img/no_stories_thumb.png" class="canHideImage" onerror="this.onerror=null;this.src='/resource/1490833458000/btcmobile__ContentResources/img/no_stories_thumb.png'"/>
+                        
+                        <div class="description"><div class="container">buy this product with opportunity  hey what are we going to test?</div></div>
+                        
+                        
+                    </div>
+                    <h1>New buyop phase</h1>
+                    <div id="author">
+                        K W Admin
+                    </div>
+                     <ul class="story-actions">
+                         <li class="share" data-sharing="31">
+                             <a href="#" class="icon-share variable-border-hover variable-color" title="Share">Share</a>
+                         </li>
+                         <li class="view" data-sharing="31">
+                             <a href="#" class="icon-view variable-border-hover variable-color" title="View">View</a>
+                         </li>
+
+                    </ul>
+                </article>
+            </li>
+        
+        </ul>
+        <div style="clear:both;"></div>
+    </div>
+
+</div>-->
+
+
+</aura:component>

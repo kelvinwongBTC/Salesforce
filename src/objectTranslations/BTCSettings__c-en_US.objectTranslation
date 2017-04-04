@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>BTCSetting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BTCSettings</value>
+    </caseValues>
+    <fields>
+        <label><!-- API Client Id --></label>
+        <name>API_CLIENT_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- API Client Secret --></label>
+        <name>API_CLIENT_SERCRET__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base URL --></label>
+        <name>Base_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Security Token --></label>
+        <name>SECURITY_TOKEN__c</name>
+    </fields>
+    <fields>
+        <label><!-- WebAPP URL --></label>
+        <name>WebAPP_URL__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

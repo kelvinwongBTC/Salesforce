@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:includeLightning />
+    
+
+    <div id="lightning" />
+
+    <script>
+    $Lightning.use("BTCKW:VisualForceLightningTest", function() {
+            $Lightning.createComponent("BTCKW:CRMRecommendation",
+          {  },
+          "lightning",
+          function(cmp) {
+            // do some stuff
+          });
+    });
+    </script>
+</apex:page>

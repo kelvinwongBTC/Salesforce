@@ -1,0 +1,7 @@
+<aura:component controller="BTCModel">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="settings" type="BTCMOBILE__BTCSettings__c"/>
+    <aura:attribute name="signature" type="String"/>
+    <aura:attribute name="authenticationURL" type="String"/>
+    <ui:button label="Authorize" aura:id="authorize" press="{!c.authorizeUser}"/>
+</aura:component>
