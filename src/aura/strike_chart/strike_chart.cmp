@@ -9,7 +9,7 @@
     <aura:attribute access="private" name="yAxisLabelMaxHeight" type="Integer" default="100" description="This is the max width the y axis can grow to. It should be derived from chart height."/>
     <aura:attribute name="thresholdLabel" type="String" default="Threshhold" description="Label that appears at the threshold value."/>
     <aura:attribute name="thresholdValue" type="Integer" description="Value where the threshold line appears. "/>
-
+ 
     <!-- CHANGE THE DOM AND FORCE RUN RERENDERER, WITHOUT CHANGING THE DOM RERENDER DOESN'T RUN -->
     <div class="slds-hide">{!v.triggerRedraw}</div>
 
